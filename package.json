@@ -5,9 +5,9 @@
   "main": "index.ts",
   "scripts": {
     "build": "tsc",
-    "deploy": "powershell -Command \"$env:PULUMI_CONFIG_PASSPHRASE='pulumi123'; & 'C:\\Program Files (x86)\\Pulumi\\pulumi.exe' up --yes\"",
-    "destroy": "powershell -Command \"$env:PULUMI_CONFIG_PASSPHRASE='pulumi123'; & 'C:\\Program Files (x86)\\Pulumi\\pulumi.exe' destroy --yes\"",
-    "status": "powershell -Command \"$env:PULUMI_CONFIG_PASSPHRASE='pulumi123'; & 'C:\\Program Files (x86)\\Pulumi\\pulumi.exe' stack output\""
+    "deploy": "tsc && pulumi up --yes",
+    "destroy": "pulumi destroy --yes",
+    "status": "pulumi stack output"
   },
   "dependencies": {
     "@pulumi/pulumi": "^3.150.0",
