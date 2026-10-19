@@ -1,0 +1,20 @@
+{
+  "name": "aws-vm-pulumi",
+  "version": "1.0.0",
+  "description": "Aprovisionamiento de VM en AWS con Pulumi y TypeScript",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc",
+    "deploy": "powershell -Command \"$env:PULUMI_CONFIG_PASSPHRASE='pulumi123'; & 'C:\\Program Files (x86)\\Pulumi\\pulumi.exe' up --yes\"",
+    "destroy": "powershell -Command \"$env:PULUMI_CONFIG_PASSPHRASE='pulumi123'; & 'C:\\Program Files (x86)\\Pulumi\\pulumi.exe' destroy --yes\"",
+    "status": "powershell -Command \"$env:PULUMI_CONFIG_PASSPHRASE='pulumi123'; & 'C:\\Program Files (x86)\\Pulumi\\pulumi.exe' stack output\""
+  },
+  "dependencies": {
+    "@pulumi/pulumi": "^3.150.0",
+    "@pulumi/aws": "^6.60.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "typescript": "^5.7.0"
+  }
+}

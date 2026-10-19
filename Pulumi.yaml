@@ -1,0 +1,3 @@
+name: aws-vm-pulumi
+runtime: nodejs
+description: Provisionar una maquina virtual EC2 (Amazon Linux 2023) en AWS con Pulumi
